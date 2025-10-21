@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Серия: Город ночью",
+    "year": 2024,
+    "type": "photo",
+    "src": "assets/img/city-1.jpg",
+    "thumb": "assets/img/city-1-thumb.jpg",
+    "tags": ["фото", "город", "ночь"]
+  },
+  {
+    "id": 2,
+    "title": "Промо-ролик Studio X",
+    "year": 2025,
+    "type": "video",
+    "embed": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "src": "",
+    "tags": ["видео", "коммерческий"]
+  },
+  {
+    "id": 3,
+    "title": "Портреты: серия 02",
+    "year": 2023,
+    "type": "photo",
+    "src": "assets/img/portraits-02.jpg",
+    "thumb": "assets/img/portraits-02-thumb.jpg",
+    "tags": ["фото", "портрет"]
+  }
+]

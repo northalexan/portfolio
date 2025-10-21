@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Моё портфолио</title>
+  <meta name="description" content="Портфолио: фото и видео" />
+  <meta property="og:title" content="Моё портфолио" />
+  <meta property="og:description" content="Портфолио: фото и видео" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="logo">Моё портфолио</h1>
+    <nav class="nav">
+      <a href="#works">Работы</a>
+      <a href="#about">Обо мне</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Фото и видео</h2>
+    <p>Короткий подзаголовок о тебе и специализации.</p>
+  </section>
+
+  <section id="works" class="works">
+    <div class="works-controls">
+      <input id="search" type="search" placeholder="Поиск по названию/тегам…" />
+      <div class="tags" id="tags"></div>
+    </div>
+    <div id="grid" class="grid" aria-live="polite"></div>
+  </section>
+
+  <section id="about" class="about">
+    <h3>Обо мне</h3>
+    <p>Пара абзацев о тебе. Город, специализация, инструменты.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h3>Контакты</h3>
+    <p>Пиши: <a href="mailto:you@example.com">you@example.com</a> или <a href="https://t.me/yourhandle" target="_blank" rel="noopener">Telegram</a></p>
+  </section>
+
+  <!-- Лайтбокс -->
+  <dialog id="lightbox">
+    <button class="lb-close" id="lbClose" aria-label="Закрыть">×</button>
+    <div id="lbContent"></div>
+  </dialog>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Твоё имя</small>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
