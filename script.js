@@ -33,10 +33,21 @@ lbContent.innerHTML = '';
 }
 
 
+// ===== Обработчик клика по галерее =====
 document.getElementById('gallery').addEventListener('click', (e)=>{
-const card = e.target.closest('.card');
-if(!card) return; openLightbox(card);
+  // если клик был по ссылке внутри карточки — позволяем перейти
+  if (e.target.closest('a')) return;
+
+  const card = e.target.closest('.card');
+  if (!card) return;
+
+  // если карточка помечена как "ссылка" — не открываем лайтбокс
+  if (card.dataset.type === 'link') return;
+
+  // иначе — открываем лайтбокс (для обычных карточек)
+  openLightbox(card);
 });
+
 if(lb){
 lb.addEventListener('click', (e)=>{ if(e.target === lb) closeLightbox(); });
 lbClose.addEventListener('click', closeLightbox);
