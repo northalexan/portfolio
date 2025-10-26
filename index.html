@@ -1,61 +1,89 @@
 <!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Моё портфолио</title>
-  <meta name="description" content="Портфолио: фото и видео" />
-  <meta property="og:title" content="Моё портфолио" />
-  <meta property="og:description" content="Портфолио: фото и видео" />
-  <meta property="og:type" content="website" />
-  <link rel="icon" href="assets/favicon.png" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="site-header">
-    <h1 class="logo">Моё портфолио</h1>
-    <nav class="nav">
-      <a href="#works">Работы</a>
-      <a href="#about">Обо мне</a>
-      <a href="#contact">Контакты</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <h2>Фото и видео</h2>
-    <p>Короткий подзаголовок о тебе и специализации.</p>
-  </section>
 
-  <section id="works" class="works">
-    <div class="works-controls">
-      <input id="search" type="search" placeholder="Поиск по названию/тегам…" />
-      <div class="tags" id="tags"></div>
-    </div>
-    <div id="grid" class="grid" aria-live="polite"></div>
-  </section>
+<figure class="card" data-type="video" data-tags="ozon,видео,ИИ" data-src="assets/video/demo.mp4" data-poster="assets/img/sample3.jpg">
+<img src="assets/img/sample3.jpg" alt="Видео-превью для карточки" loading="lazy"/>
+<figcaption>
+<div class="title">Видеопревью (ИИ)</div>
+<span class="badge">Видео</span>
+</figcaption>
+</figure>
 
-  <section id="about" class="about">
-    <h3>Обо мне</h3>
-    <p>Пара абзацев о тебе. Город, специализация, инструменты.</p>
-  </section>
 
-  <section id="contact" class="contact">
-    <h3>Контакты</h3>
-    <p>Пиши: <a href="mailto:you@example.com">you@example.com</a> или <a href="https://t.me/yourhandle" target="_blank" rel="noopener">Telegram</a></p>
-  </section>
+<figure class="card" data-type="anim" data-tags="анимация,баннер" data-src="assets/img/sample4.jpg">
+<img src="assets/img/sample4.jpg" alt="Анимационный баннер" loading="lazy"/>
+<figcaption>
+<div class="title">Анимационный баннер</div>
+<span class="badge">Анимация</span>
+</figcaption>
+</figure>
+</div>
+</section>
 
-  <!-- Лайтбокс -->
-  <dialog id="lightbox">
-    <button class="lb-close" id="lbClose" aria-label="Закрыть">×</button>
-    <div id="lbContent"></div>
-  </dialog>
 
-  <footer class="site-footer">
-    <small>© <span id="year"></span> Твоё имя</small>
-  </footer>
+<!-- Блок результатов/кейсов с цифрами -->
+<section id="results" class="container">
+<h2>Результаты</h2>
+<div class="results">
+<div class="res">
+<div class="num">+20–35%</div>
+<div class="lbl">Рост CTR карточек</div>
+</div>
+<div class="res">
+<div class="num">+5–15%</div>
+<div class="lbl">Рост конверсии в заказ</div>
+</div>
+<div class="res">
+<div class="num">↓ позиция</div>
+<div class="lbl">Улучшение места в каталоге*</div>
+</div>
+</div>
+<p class="muted footnote">* В маркетплейсах меньшая цифра позиции означает лучшее место. Показатель трактуется как улучшение при снижении значения.</p>
+</section>
 
-  <script src="script.js" defer></script>
+
+<!-- Процесс работы -->
+<section id="process" class="container">
+<h2>Как работаю</h2>
+<ol class="steps">
+<li><strong>Бриф</strong>: ниша, УТП, конкуренты, ограничения бренда.</li>
+<li><strong>Прототип</strong>: структура слайдов карточки, иерархия смыслов.</li>
+<li><strong>Дизайн</strong>: финальные макеты + адаптации.</li>
+<li><strong>A/B</strong>: варианты для теста, метрики до/после.</li>
+<li><strong>Видео/анимация</strong> по необходимости.</li>
+</ol>
+</section>
+
+
+<section id="about" class="container">
+<h2>Обо мне</h2>
+<p>Делаю карточки для маркетплейсов с упором на метрики: CTR, конверсия, позиция. Работаю с Ozon, WB, Яндекс.Маркет. Использую систему компонентов, чёткую типографику и доказательный подход через A/B-тесты. Видео в ИИ и анимированные превью — как усиление карточки.</p>
+</section>
+
+
+<section id="contacts" class="container">
+<h2>Контакты</h2>
+<ul class="contacts">
+<li><a href="mailto:you@example.com">you@example.com</a></li>
+<li><a href="https://t.me/yourusername" target="_blank" rel="noopener">Telegram</a></li>
+<li><a href="https://instagram.com/yourusername" target="_blank" rel="noopener">Instagram</a></li>
+</ul>
+</section>
+</main>
+
+
+<footer class="container">
+<small>© <span id="y"></span> Твоё имя</small>
+</footer>
+
+
+<!-- Модалка предпросмотра -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+<button class="close" id="lbClose" aria-label="Закрыть">×</button>
+<div class="content" id="lbContent"></div>
+</div>
+
+
+<script src="script.js"></script>
 </body>
 </html>
