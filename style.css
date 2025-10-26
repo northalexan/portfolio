@@ -215,6 +215,65 @@ footer{opacity:.7}
 .section-title{
   margin: 12px 0 18px;
 }
+/* ===== Центровка шапки и заголовков ===== */
+.header.center{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+  text-align:center;
+}
+.section-title{
+  margin: 12px 0 18px;
+  text-align:center;          /* центрируем заголовок секции */
+}
+
+/* ===== Строка "AI design studio" — жирнее и на 1.5x больше ===== */
+.brand-title{
+  /* базово был стиль .softline (около 15px) — увеличим и утяжелим */
+  font-size: 22px;            /* ~1.5 раза от 15px */
+  font-weight: 700;           /* жирнее */
+  color: var(--fg);
+  letter-spacing: 0.3px;
+}
+
+/* ===== "CtrBoost" — креативный градиент в цветах Ozon + WB ===== */
+.brand-sub{
+  /* крупнее в 2 раза относительно "AI design studio" */
+  font-size: 44px;            /* можно увеличить при желании */
+  line-height: 1.1;
+  font-weight: 800;
+  /* градиент: Ozon-синий → WB-фиолетовый */
+  background: linear-gradient(90deg, #2F80FF, #9B5CF6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@media (max-width: 600px){
+  .brand-sub{ font-size: 36px; }
+}
+
+/* ===== Меню: оставляем "Контакты" и делаем кнопкой ===== */
+.nav-solo{
+  margin-top: 6px;
+  display:flex;
+  justify-content:center;     /* центрируем кнопку */
+}
+.nav-solo .nav-link{
+  font-size: 15px;            /* в стиле подписей карточек */
+  color: var(--fg);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.18); /* рамка-кнопка */
+  background: rgba(255,255,255,0.03);
+  transition: background .2s ease, border-color .2s ease, transform .15s ease;
+}
+.nav-solo .nav-link:hover{
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.28);
+  transform: translateY(-1px);
+}
 
 
 
