@@ -87,3 +87,17 @@ applyFilters();
 });
 });
 if(search){ search.addEventListener('input', applyFilters); }
+// ===== Плавное появление блоков кейсов при скролле =====
+const caseSections = document.querySelectorAll('.case-section');
+
+function revealCases() {
+  caseSections.forEach(sec => {
+    const rect = sec.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      sec.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealCases);
+window.addEventListener('load', revealCases);
