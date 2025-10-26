@@ -89,41 +89,44 @@ footer{opacity:.7}
 @media (max-width:600px){
 .card img{height:180px}
 }
-/* --- Простое масштабирование карточек --- */
-
-/* первая карточка — большая */
-.card:first-child {
-  transform: scale(1.25);
-  transform-origin: center;
-  z-index: 2;
+/* ===== Макет: 1 большая по центру + 2 ниже поменьше ===== */
+.grid-featured{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 24px;
+  align-items: start;
 }
 
-/* делаем отступ, чтобы не налезали друг на друга */
-.grid {
-  gap: 40px;
+/* Первая карточка — отдельной строкой, по центру */
+.grid-featured .card.featured{
+  grid-column: 1 / -1;     /* на всю ширину строки */
+  justify-self: center;    /* по центру сетки */
+  max-width: 560px;        /* чтобы не расползалась слишком широко */
 }
 
-/* вторая и третья — чуть меньше */
-.card:nth-child(2),
-.card:nth-child(3) {
-  transform: scale(0.9);
-  opacity: 0.9;
+/* Размер превью у первой — крупнее */
+.grid-featured .card.featured img{
+  height: 360px;           /* можно 400, если хочешь ещё крупнее */
 }
 
-/* чтобы при наведении не прыгали */
-.card:hover {
-  transform: scale(1.28);
+/* У остальных — поменьше */
+.grid-featured .card:not(.featured) img{
+  height: 220px;           /* можно 240 при желании */
 }
 
-/* на мобилках — выравниваем обратно */
-@media (max-width: 900px) {
-  .card:first-child {
-    transform: scale(1);
+/* Мобильная версия — всё столбиком */
+@media (max-width: 900px){
+  .grid-featured{
+    grid-template-columns: 1fr;
   }
-  .card:nth-child(2),
-  .card:nth-child(3) {
-    transform: scale(1);
-    opacity: 1;
+  .grid-featured .card.featured{
+    max-width: 100%;
+  }
+  .grid-featured .card.featured img{
+    height: 260px;
+  }
+  .grid-featured .card:not(.featured) img{
+    height: 200px;
   }
 }
 
