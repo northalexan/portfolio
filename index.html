@@ -1,89 +1,87 @@
 <!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Моё портфолио</title>
 
+  <!-- Подключение стилей -->
+  <link rel="stylesheet" href="style.css?v=2">
 
-<figure class="card" data-type="video" data-tags="ozon,видео,ИИ" data-src="assets/video/demo.mp4" data-poster="assets/img/sample3.jpg">
-<img src="assets/img/sample3.jpg" alt="Видео-превью для карточки" loading="lazy"/>
-<figcaption>
-<div class="title">Видеопревью (ИИ)</div>
-<span class="badge">Видео</span>
-</figcaption>
-</figure>
+  <!-- Мета для соцсетей -->
+  <meta name="description" content="Дизайнер карточек для маркетплейсов. Помогаю улучшать CTR, конверсию и позиции в каталоге. Ozon, Wildberries, Яндекс.Маркет." />
+  <meta property="og:title" content="Портфолио дизайнера карточек маркетплейсов" />
+  <meta property="og:description" content="Кейсы, примеры работ, и метрики до и после." />
+  <meta property="og:image" content="assets/img/og-cover.jpg" />
+</head>
 
+<body>
+<header class="container">
+  <h1>Моё портфолио</h1>
+  <nav>
+    <a href="#work">Работы</a>
+    <a href="#about">Обо мне</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+</header>
 
-<figure class="card" data-type="anim" data-tags="анимация,баннер" data-src="assets/img/sample4.jpg">
-<img src="assets/img/sample4.jpg" alt="Анимационный баннер" loading="lazy"/>
-<figcaption>
-<div class="title">Анимационный баннер</div>
-<span class="badge">Анимация</span>
-</figcaption>
-</figure>
-</div>
-</section>
+<main>
+  <!-- Блок с работами -->
+  <section id="work" class="container">
+    <h2>Работы</h2>
+    <div class="grid" id="gallery">
 
+      <!-- Примеры карточек -->
+      <figure class="card" data-type="image" data-src="assets/img/sample1.jpg">
+        <img src="assets/img/sample1.jpg" alt="Работа 1" />
+        <figcaption>Работа 1</figcaption>
+      </figure>
 
-<!-- Блок результатов/кейсов с цифрами -->
-<section id="results" class="container">
-<h2>Результаты</h2>
-<div class="results">
-<div class="res">
-<div class="num">+20–35%</div>
-<div class="lbl">Рост CTR карточек</div>
-</div>
-<div class="res">
-<div class="num">+5–15%</div>
-<div class="lbl">Рост конверсии в заказ</div>
-</div>
-<div class="res">
-<div class="num">↓ позиция</div>
-<div class="lbl">Улучшение места в каталоге*</div>
-</div>
-</div>
-<p class="muted footnote">* В маркетплейсах меньшая цифра позиции означает лучшее место. Показатель трактуется как улучшение при снижении значения.</p>
-</section>
+      <figure class="card" data-type="image" data-src="assets/img/sample2.jpg">
+        <img src="assets/img/sample2.jpg" alt="Работа 2" />
+        <figcaption>Работа 2</figcaption>
+      </figure>
 
+      <figure class="card" data-type="video" data-src="assets/video/demo.mp4" data-poster="assets/img/sample3.jpg">
+        <img src="assets/img/sample3.jpg" alt="Видео-работа" />
+        <figcaption>Видео-работа</figcaption>
+      </figure>
 
-<!-- Процесс работы -->
-<section id="process" class="container">
-<h2>Как работаю</h2>
-<ol class="steps">
-<li><strong>Бриф</strong>: ниша, УТП, конкуренты, ограничения бренда.</li>
-<li><strong>Прототип</strong>: структура слайдов карточки, иерархия смыслов.</li>
-<li><strong>Дизайн</strong>: финальные макеты + адаптации.</li>
-<li><strong>A/B</strong>: варианты для теста, метрики до/после.</li>
-<li><strong>Видео/анимация</strong> по необходимости.</li>
-</ol>
-</section>
+    </div>
+  </section>
 
+  <!-- Обо мне -->
+  <section id="about" class="container">
+    <h2>Обо мне</h2>
+    <p>Занимаюсь дизайном карточек для маркетплейсов (Ozon, Wildberries, Яндекс.Маркет).  
+    Оптимизирую визуал под CTR, конверсию и SEO-позиции.  
+    Работаю также с видео и анимацией для карточек.</p>
+  </section>
 
-<section id="about" class="container">
-<h2>Обо мне</h2>
-<p>Делаю карточки для маркетплейсов с упором на метрики: CTR, конверсия, позиция. Работаю с Ozon, WB, Яндекс.Маркет. Использую систему компонентов, чёткую типографику и доказательный подход через A/B-тесты. Видео в ИИ и анимированные превью — как усиление карточки.</p>
-</section>
-
-
-<section id="contacts" class="container">
-<h2>Контакты</h2>
-<ul class="contacts">
-<li><a href="mailto:you@example.com">you@example.com</a></li>
-<li><a href="https://t.me/yourusername" target="_blank" rel="noopener">Telegram</a></li>
-<li><a href="https://instagram.com/yourusername" target="_blank" rel="noopener">Instagram</a></li>
-</ul>
-</section>
+  <!-- Контакты -->
+  <section id="contacts" class="container">
+    <h2>Контакты</h2>
+    <ul class="contacts">
+      <li><a href="mailto:you@example.com">you@example.com</a></li>
+      <li><a href="https://t.me/yourusername" target="_blank" rel="noopener">Telegram</a></li>
+      <li><a href="https://instagram.com/yourusername" target="_blank" rel="noopener">Instagram</a></li>
+    </ul>
+  </section>
 </main>
 
-
 <footer class="container">
-<small>© <span id="y"></span> Твоё имя</small>
+  <small>© <span id="y"></span> Моё имя</small>
 </footer>
 
-
-<!-- Модалка предпросмотра -->
+<!-- Модальное окно для предпросмотра -->
 <div class="lightbox" id="lightbox" aria-hidden="true">
-<button class="close" id="lbClose" aria-label="Закрыть">×</button>
-<div class="content" id="lbContent"></div>
+  <button class="close" id="lbClose" aria-label="Закрыть">×</button>
+  <div class="content" id="lbContent"></div>
 </div>
 
+<!-- Подключение скрипта -->
+<script src="script.js?v=2"></script>
 
-<script src="script.js"></script>
 </body>
 </html>
+
