@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Проверка ассетов</title>
+  <link rel="stylesheet" href="style.css?v=assetcheck">
+</head>
+<body class="container" style="max-width:900px">
+  <h1>Проверка файлов</h1>
+
+  <h2>Изображения</h2>
+  <p>Если ниже не видно картинку, значит путь или имя файла не совпадает.</p>
+  <p><strong>featured.jpg</strong></p>
+  <img src="assets/img/featured.jpg?v=1" alt="featured.jpg" style="width:100%;border-radius:12px;margin-bottom:16px">
+
+  <p><strong>work-2.jpg</strong></p>
+  <img src="assets/img/work-2.jpg?v=1" alt="work-2.jpg" style="width:100%;border-radius:12px;margin-bottom:16px">
+
+  <p><strong>video-poster.jpg</strong></p>
+  <img src="assets/img/video-poster.jpg?v=1" alt="video-poster.jpg" style="width:100%;border-radius:12px;margin-bottom:16px">
+
+  <h2>Картинки для кейса</h2>
+  <p><strong>case-send.jpg</strong></p>
+  <img src="assets/img/case-send.jpg?v=1" alt="case-send.jpg" style="width:100%;border-radius:12px;margin-bottom:16px">
+
+  <p><strong>case-result-left.jpg</strong></p>
+  <img src="assets/img/case-result-left.jpg?v=1" alt="case-result-left.jpg" style="width:100%;border-radius:12px;margin-bottom:16px">
+
+  <h2>Видео</h2>
+  <p><strong>case-result.mp4</strong></p>
+  <video src="assets/video/case-result.mp4#t=0.1" controls playsinline style="width:100%;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.35)"></video>
+
+  <hr style="margin:24px 0; opacity:.3">
+  <p>Если что-то из этого не показалось — файл либо не загружен, либо имя/регистр букв не совпадает.<br>Все файлы должны лежать <code>assets/img/...</code> и <code>assets/video/...</code>.</p>
+</body>
+</html>
