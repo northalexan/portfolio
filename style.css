@@ -89,3 +89,30 @@ footer{opacity:.7}
 @media (max-width:600px){
 .card img{height:180px}
 }
+/* ===== Featured layout: 1 большая + 2 ниже ===== */
+.grid-featured {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+/* Первая «избранная» карточка — на всю ширину первой строки */
+.grid-featured .card.featured {
+  grid-column: 1 / -1;
+}
+
+/* Делаем у неё побольше превью */
+.grid-featured .card.featured img {
+  height: 360px; /* можно 400, если хочешь крупнее */
+}
+
+/* На планшетах/мобиле — одна колонка, всё друг под другом */
+@media (max-width: 900px) {
+  .grid-featured {
+    grid-template-columns: 1fr;
+  }
+  .grid-featured .card.featured img {
+    height: 240px;
+  }
+}
+
