@@ -156,6 +156,65 @@ footer{opacity:.7}
   background: rgba(255,255,255,0.08);
   letter-spacing: 0.4px;
 }
+/* ===== Центровка шапки и бренда ===== */
+.header.center{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+  text-align:center;
+}
+
+/* Лаконичная «мягкая» строка (как подписи под работами, но без подложки) */
+.softline{
+  font-size:15px;            /* как у подписей */
+  color: var(--muted);
+  letter-spacing: 0.3px;
+}
+
+/* Заголовок-бренд помельче */
+.brand-title{
+  /* класс .softline уже применён в HTML */
+}
+
+/* GrowLab — в 2 раза крупнее и чуть креативнее (градиентный текст) */
+.brand-sub{
+  font-size: 36px;           /* ~в 2 раза больше 18px/15px */
+  line-height: 1.1;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* На широких экранах можно чуть крупнее */
+@media (min-width: 900px){
+  .brand-sub{ font-size: 44px; }
+}
+
+/* Оставшееся меню — одна ссылка, стиль как у подписи */
+.nav-solo{
+  margin-top: 4px;
+}
+.nav-solo .nav-link{
+  font-size: 15px;           /* как у подписей */
+  color: var(--fg);
+  opacity: .9;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 10px;
+  transition: opacity .2s ease, background .2s ease;
+}
+.nav-solo .nav-link:hover{
+  opacity: 1;
+  background: rgba(255,255,255,.06);
+}
+
+/* Заголовок над работами — тем же «мягким» стилем */
+.section-title{
+  margin: 12px 0 18px;
+}
 
 
 
