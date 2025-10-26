@@ -443,6 +443,42 @@ footer{opacity:.7}
   opacity: 1;
   transform: translateY(0);
 }
+/* ===== Глобальное центрирование контента на всех страницах ===== */
+
+/* Весь контент оборачиваем в .page-center */
+.page-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 40px; /* небольшой отступ сверху для воздуха */
+}
+
+/* Все секции и контейнеры внутри теперь выравниваются по оси */
+.page-center .container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Для карточек — ограничим сетку по центру */
+.page-center .grid,
+.page-center .case-two {
+  justify-items: center;
+  align-items: start;
+  justify-content: center;
+}
+
+/* Футер и контакты тоже по центру */
+.page-center footer,
+.page-center #contacts {
+  text-align: center;
+  justify-content: center;
+}
 
 
 
