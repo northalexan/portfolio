@@ -89,43 +89,51 @@ footer{opacity:.7}
 @media (max-width:600px){
 .card img{height:180px}
 }
-/* ===== Макет: 1 большая по центру + 2 ниже поменьше ===== */
-.grid-featured{
+/* ===== Правильный макет: 1 широкая карточка сверху, 2 ниже ===== */
+
+.grid-featured {
   display: grid;
-  grid-template-columns: repeat(2, minmax(260px, 1fr));
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 32px;
   align-items: start;
 }
 
-/* Первая карточка — отдельной строкой, по центру */
-.grid-featured .card.featured{
-  grid-column: 1 / -1;     /* на всю ширину строки */
-  justify-self: center;    /* по центру сетки */
-  max-width: 560px;        /* чтобы не расползалась слишком широко */
+/* первая карточка — большая и широкая */
+.grid-featured .card.featured {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-/* Размер превью у первой — крупнее */
-.grid-featured .card.featured img{
-  height: 360px;           /* можно 400, если хочешь ещё крупнее */
+.grid-featured .card.featured img {
+  height: 420px;
+  object-fit: cover;
 }
 
-/* У остальных — поменьше */
-.grid-featured .card:not(.featured) img{
-  height: 220px;           /* можно 240 при желании */
+/* две остальные — ниже, в одну строку */
+.grid-featured .card-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  justify-content: center;
+  align-items: start;
 }
 
-/* Мобильная версия — всё столбиком */
-@media (max-width: 900px){
-  .grid-featured{
-    grid-template-columns: 1fr;
-  }
-  .grid-featured .card.featured{
-    max-width: 100%;
-  }
-  .grid-featured .card.featured img{
+.grid-featured .card-row .card img {
+  height: 240px;
+  object-fit: cover;
+}
+
+/* на мобильных всё идёт столбиком */
+@media (max-width: 900px) {
+  .grid-featured .card.featured img {
     height: 260px;
   }
-  .grid-featured .card:not(.featured) img{
+  .grid-featured .card-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .grid-featured .card-row .card img {
     height: 200px;
   }
 }
