@@ -89,40 +89,43 @@ footer{opacity:.7}
 @media (max-width:600px){
 .card img{height:180px}
 }
-/* ===== Featured layout: 1 большая сверху + 2 ниже ===== */
-.grid-featured {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(260px, 1fr));
-  grid-auto-rows: auto;
-  gap: 16px;
+/* --- Простое масштабирование карточек --- */
+
+/* первая карточка — большая */
+.card:first-child {
+  transform: scale(1.25);
+  transform-origin: center;
+  z-index: 2;
 }
 
-/* Первая карточка — отдельная строка на всю ширину */
-.grid-featured .card.featured {
-  grid-column: 1 / -1;
-  height: auto;
+/* делаем отступ, чтобы не налезали друг на друга */
+.grid {
+  gap: 40px;
 }
 
-.grid-featured .card.featured img {
-  height: 400px; /* размер большой карточки */
+/* вторая и третья — чуть меньше */
+.card:nth-child(2),
+.card:nth-child(3) {
+  transform: scale(0.9);
+  opacity: 0.9;
 }
 
-/* Обычные карточки — ниже, две рядом */
-.grid-featured .card:not(.featured) img {
-  height: 220px;
+/* чтобы при наведении не прыгали */
+.card:hover {
+  transform: scale(1.28);
 }
 
-/* На мобильных всё по одной колонке */
+/* на мобилках — выравниваем обратно */
 @media (max-width: 900px) {
-  .grid-featured {
-    grid-template-columns: 1fr;
+  .card:first-child {
+    transform: scale(1);
   }
-  .grid-featured .card.featured img {
-    height: 260px;
-  }
-  .grid-featured .card:not(.featured) img {
-    height: 200px;
+  .card:nth-child(2),
+  .card:nth-child(3) {
+    transform: scale(1);
+    opacity: 1;
   }
 }
+
 
 
