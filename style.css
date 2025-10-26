@@ -382,6 +382,33 @@ footer{opacity:.7}
 @media (max-width: 900px){
   .case-video{ max-width: 100%; }
 }
+/* ===== Формат 3:4 для всех фото и видео на странице ozon-wb.html ===== */
+
+/* Основные контейнеры кейса */
+.case-one img,
+.case-img img,
+.case-video video {
+  aspect-ratio: 3 / 4;           /* фиксируем пропорцию 3:4 */
+  object-fit: cover;             /* чтобы кадр не растягивался */
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Для видео — чтобы выглядело одинаково с фото */
+.case-video video {
+  background: #000;              /* чёрный фон, пока не загружено */
+}
+
+/* На мобильных — то же, просто в столбик */
+@media (max-width: 900px) {
+  .case-one img,
+  .case-img img,
+  .case-video video {
+    aspect-ratio: 3 / 4;
+  }
+}
 
 
 
