@@ -137,6 +137,25 @@ footer{opacity:.7}
     height: 200px;
   }
 }
+/* ===== Стиль подписей под работами ===== */
+
+.card figcaption {
+  font-size: 15px;
+  color: var(--muted);
+  text-align: center;
+  padding: 14px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(4px);
+  letter-spacing: 0.3px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  transition: all 0.25s ease;
+}
+
+.card:hover figcaption {
+  color: var(--accent);
+  background: rgba(255,255,255,0.08);
+  letter-spacing: 0.4px;
+}
 
 
 
