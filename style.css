@@ -274,6 +274,114 @@ footer{opacity:.7}
   border-color: rgba(255,255,255,0.28);
   transform: translateY(-1px);
 }
+/* ===== Страница кейса: две фотографии + описание ===== */
+.case-two{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 16px;
+  align-items: start;
+  justify-items: center;
+}
+.case-img{
+  width: 100%;
+  max-width: 540px;           /* ограничим ширину каждой фотокарточки */
+}
+.case-img img{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;        /* одинаковое соотношение сторон */
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.case-desc{
+  max-width: 800px;
+  margin: 10px auto 0;
+  color: var(--muted);
+  background: linear-gradient(180deg,var(--card),var(--card2));
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px 20px;
+  letter-spacing: 0.2px;
+}
+
+/* мобилки: по одной колонке */
+@media (max-width: 900px){
+  .case-two{ grid-template-columns: 1fr; }
+  .case-img{ max-width: 100%; }
+}
+/* ===== Стикер-плашка в стиле кнопки "Контакты", но не ссылка ===== */
+.nav-link.pill{
+  display:inline-block;
+  cursor: default;
+}
+
+/* ===== Один большой снимок по центру ===== */
+.case-one{
+  max-width: 1000px;
+  margin: 12px auto 0;
+}
+.case-one img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio: 16 / 9;   /* одинаковая форма даже без загрузки */
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* ===== Два снимка слева/справа, строго одинаковые ===== */
+.case-two{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 16px;
+  align-items: start;
+  justify-items: center;
+  max-width: 1100px;
+  margin: 10px auto 0;
+}
+.case-img{
+  width: 100%;
+  max-width: 540px;
+}
+.case-img img{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;   /* одинаковое соотношение */
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Мобилки — всё по одной колонке, центрировано */
+@media (max-width: 900px){
+  .case-two{ grid-template-columns: 1fr; gap: 12px; }
+  .case-one{ max-width: 100%; }
+  .case-img{ max-width: 100%; }
+}
+/* ===== Видео в блоке кейса (справа от фото) ===== */
+.case-video{
+  width: 100%;
+  max-width: 540px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.case-video video{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background: #000; /* если видео не сразу грузится */
+}
+
+/* Мобилки — видео тоже в отдельной строке */
+@media (max-width: 900px){
+  .case-video{ max-width: 100%; }
+}
 
 
 
