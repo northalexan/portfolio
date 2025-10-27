@@ -536,5 +536,18 @@ footer{opacity:.7}
   margin-top: 0;
   padding-top: 0;
 }
+<!-- Центрированный верхний блок -->
+<section class="container hero-block">
+  <div class="brand">
+    <div class="brand-title">AI design studio</div>
+    <div class="brand-sub">CtrBoost</div>
+  </div>
+
+  <nav class="nav-solo">
+    <a href="#contacts" class="nav-link">Контакты</a>
+  </nav>
+
+  <a href="index.html" class="back-btn">На главную</a>
+</section>
 
 
