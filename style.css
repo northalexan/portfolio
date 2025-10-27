@@ -493,5 +493,16 @@ footer{opacity:.7}
   color: #ff7676;
   font-weight: 600;
 }
+/* ===== Выравнивание размеров картинок в блоках "Вы нам это" ===== */
+.case-one img {
+  width: 100%;
+  max-width: 600px;         /* ограничиваем ширину, как у видео */
+  aspect-ratio: 3 / 4;      /* сохраняем ту же пропорцию */
+  object-fit: cover;        /* чтобы не растягивалось */
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: block;
+  margin: 0 auto;           /* центрируем */
+}
 
 
