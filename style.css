@@ -525,5 +525,16 @@ footer{opacity:.7}
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
+/* ===== Центровка шапки на странице ozon-wb ===== */
+.header.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh; /* центрируем блок примерно на полэкрана вниз */
+  text-align: center;
+  margin-top: 0;
+  padding-top: 0;
+}
 
 
