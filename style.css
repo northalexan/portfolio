@@ -595,5 +595,42 @@ footer{opacity:.7}
 /* На всякий случай глушим прежние правила, чтобы не тянули разметку */
 .header.center{ all: unset; }
 .nav-solo{ display:none; }
+/* ===== Единые кнопки (Контакты / На главную) ===== */
+.cta-wrap{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.cta-btn{
+  display:inline-block;
+  padding:12px 28px;
+  border: 2px solid var(--primary);
+  border-radius: var(--radius);
+  color: var(--primary);
+  text-decoration:none;
+  font-weight:700;
+  font-size:16px;
+  background: transparent;
+  transition: all .2s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,.25);
+}
+
+.cta-btn:hover{
+  background: var(--primary);
+  color: var(--bg);
+  box-shadow: 0 0 22px rgba(106,169,255,.45);
+}
+
+/* Плавный скролл к контактам и легкая подсветка секции, когда к ней пришли по якорю */
+html{ scroll-behavior: smooth; }
+
+#contacts:target{
+  outline: 2px solid var(--primary);
+  box-shadow: 0 0 0 6px rgba(106,169,255,.2);
+  border-radius: var(--radius);
+}
 
 
