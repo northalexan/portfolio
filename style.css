@@ -632,5 +632,15 @@ html{ scroll-behavior: smooth; }
   box-shadow: 0 0 0 6px rgba(106,169,255,.2);
   border-radius: var(--radius);
 }
+/* Видеоблок 16:9 (для страниц с одним широким видео) */
+.w16x9{
+  aspect-ratio: 16 / 9 !important;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background:#000;
+}
 
 
