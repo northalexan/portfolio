@@ -447,5 +447,51 @@ footer{opacity:.7}
   justify-content: center;
 }
 
+/* ===== Таблица CTR-анализ ===== */
+.ctr-table {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.ctr-table table {
+  border-collapse: collapse;
+  width: 360px;
+  background: linear-gradient(180deg, var(--card), var(--card2));
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  font-size: 15px;
+}
+
+.ctr-table th, .ctr-table td {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 10px 14px;
+  text-align: center;
+}
+
+.ctr-table th {
+  background: rgba(255,255,255,0.05);
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.ctr-table td {
+  color: var(--muted);
+}
+
+.ctr-table tr:last-child td {
+  border-bottom: none;
+}
+
+.green {
+  color: #7ef0d4;
+  font-weight: 600;
+}
+
+.red {
+  color: #ff7676;
+  font-weight: 600;
+}
 
 
