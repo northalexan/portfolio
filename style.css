@@ -642,5 +642,48 @@ html{ scroll-behavior: smooth; }
   box-shadow: var(--shadow);
   background:#000;
 }
+/* ===== Бренд наверху (как на главном фото) ===== */
+.brand-mark{
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #2F80FF, #9B5CF6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@media (max-width: 600px){ .brand-mark{ font-size: 32px; } }
 
+/* ===== Кнопки-контакты внизу ===== */
+.contact-actions{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top: 6px;
+}
+.contact-btn{
+  display:inline-block;
+  padding:12px 22px;
+  border-radius: var(--radius);
+  text-decoration:none;
+  font-weight:700;
+  font-size:16px;
+  border:2px solid transparent;
+  background: linear-gradient(180deg, var(--card), var(--card2));
+  box-shadow: var(--shadow);
+  transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.contact-btn:hover{
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,.2);
+  box-shadow: 0 0 22px rgba(106,169,255,.35);
+}
+.contact-btn.mail{ color:#7ec8ff; }
+.contact-btn.tg{ color:#7ef0d4; }
+
+/* Секция контактов компактнее и по центру */
+#contacts .section-title{ margin-top: 6px; }
+#contacts .contacts{ display:none; } /* прячем старый список, если где-то остался */
 
